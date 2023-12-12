@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #0d2849 57%, #170808 100%);
+}
+
+.Logo {
+    width: 320px;
+    height: 111px;
+    margin: 235px 0 131px;
+    background-image: linear-gradient(to bottom, #c8c8c8 17%, rgba(141, 141, 141, 0.45) 100%);
+    font-family: Inter;
+    font-size: 80px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.seta-circular {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 210px;
+    height: 60px;
+    background-color: #0d2849; /* Cor da seta */
+    border-radius: 5ch;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+    z-index: 2; /* Define a ordem de empilhamento, */
+}
+
+.seta-circular::before {
+    content: '';
+    position: relative;
+    top: -150px;
+    width: 10px;
+    height: 500%; /* Ajuste conforme necessário para o comprimento da cauda da seta */
+    background-color: #0d2849; /* Cor da seta */
+    border-radius: 10%;
+    transform: rotate(10%);
+}
+
+.seta-circular:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    z-index: 4; /* Define a ordem de empilhamento, */
+}
+
+.toque-para-continuar {
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    transform: translateX(0%);
+    font-size: 20px; /* Ajuste o tamanho da fonte  */
+    color: white; /* Cor do texto */
+    opacity: 1; /* Opacidade inicial */
+    animation: fadeEffect 5s infinite; /* total da animação,  */
+    z-index: 2; /* Define a ordem de empilhamento, */
+    text-decoration: none;
+}
+
+
+@keyframes fadeEffect {
+    0%, 100% {
+    opacity: 1;
+    }
+    50% {
+    opacity: 0;
+    }
+}
